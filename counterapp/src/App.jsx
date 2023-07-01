@@ -12,14 +12,29 @@ import Type1UseEffect from './components/Type1UseEffect';
 import Type2UseEffecct from './components/Type2UseEffecct';
 import Type3UseEffect from './components/Type3UseEffect';
 import Type4UseEffect from './components/Type4UseEffect';
+import Params from './components/01-07/Params';
+import SingleProduct from './components/01-07/SingleProduct';
+import DeclerativeWay from './components/01-07/DeclerativeWay';
+import Map from './components/01-07/Map';
+import { useState } from 'react';
+import Wrapper from './components/01-07/Wrapper';
+import StyledCompo from './components/01-07/StyledCompo';
 
 function App() {
+
+  const [myUsers, setMyUsers] = useState(["Rahul", "Krishan", "Manoj"])
 
   // console.log("Inside app")
   return (
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/styled-compo' element={<StyledCompo />} />
+        <Route exact path='/wrappper' element={<Wrapper />} />
+        <Route exact path='/map' element={<Map myUsers={myUsers} setMyUsers={setMyUsers} myName={"Santosh"} kuchBhi={["rOCKY", "rAJ", "hOIHIBUI"]} />} />
+        <Route exact path='/declerative-way' element={<DeclerativeWay />} />
+        <Route exact path='/single-product/:swaraj' element={<SingleProduct />} />
+        <Route exact path='/params' element={<Params />} />
         <Route exact path='/type-4-useeffect' element={<Type4UseEffect />} />
         <Route exact path='/type-3-useeffect' element={<Type3UseEffect />} />
         <Route exact path='/type-2-useeffect' element={<Type2UseEffecct />} />
@@ -30,7 +45,7 @@ function App() {
         <Route exact path="/welcome" element={<Welcome />} />
         <Route exact path='/login' element={<Login />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

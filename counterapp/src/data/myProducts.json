@@ -1,0 +1,110 @@
+[
+    {
+        "p_id": "11",
+        "name": "Awdiz Institute",
+        "price": 9876000,
+        "Quantity": 20,
+        "instock": "Yes",
+        "description": "Institution",
+        "category": "education"
+    },
+    {
+        "p_id": "0",
+        "name": "Iphone 14 Pro Max",
+        "price": 130000,
+        "Quantity": 27,
+        "instock": "Yes",
+        "description": "9 Inch HD Quality Display",
+        "category": "phone"
+    },
+    {
+        "p_id": "1",
+        "name": "HP Laptop",
+        "price": 56000,
+        "Quantity": 14,
+        "instock": "Yes",
+        "description": "18 Inch HD Quality Display",
+        "category": "laptop"
+    },
+    {
+        "p_id": "2",
+        "name": "Macbook Air M2",
+        "price": 119000,
+        "Quantity": 0,
+        "instock": "No",
+        "description": "13 Inch HD Quality Display",
+        "category": "laptop"
+    },
+    {
+        "p_id": "3",
+        "name": "Macbook Air M1",
+        "price": 160000,
+        "Quantity": 52,
+        "instock": "Yes",
+        "description": "13 Inch HD Quality Display",
+        "category": "laptop"
+    },
+    {
+        "p_id": "4",
+        "name": "Macbook PRO M1",
+        "price": 180000,
+        "Quantity": 0,
+        "instock": "No",
+        "description": "13 Inch HD Quality Display",
+        "category": "laptop"
+    },
+    {
+        "p_id": "5",
+        "name": "Macbook PRO M2",
+        "price": 210000,
+        "Quantity": 34,
+        "instock": "Yes",
+        "description": "16 Inch HD Quality Display",
+        "category": "laptop"
+    },
+    {
+        "p_id": "6",
+        "name": "Macbook PRO M3",
+        "price": 240000,
+        "Quantity": 34,
+        "instock": "Yes",
+        "description": "13 Inch HD Quality Display",
+        "category": "laptop"
+    },
+    {
+        "p_id": "7",
+        "name": "Iphone 13 Pro Max",
+        "price": 110000,
+        "Quantity": 34,
+        "instock": "Yes",
+        "description": "9 Inch HD Quality Display",
+        "category": "phone"
+    },
+    {
+        "p_id": "8",
+        "name": "Iphone 13 Pro",
+        "price": 90000,
+        "Quantity": 34,
+        "instock": "Yes",
+        "description": "9 Inch HD Quality Display",
+        "category": "phone"
+    },
+    {
+        "p_id": "9",
+        "name": "Iphone 12 Pro",
+        "price": 80000,
+        "Quantity": 34,
+        "instock": "Yes",
+        "description": "8 Inch HD Quality Display",
+        "category": "phone"
+    },
+    {
+        "p_id": "10",
+        "name": "Iphone 11 Pro",
+        "price": 70000,
+        "Quantity": 34,
+        "instock": "Yes",
+        "description": "7 Inch HD Quality Display",
+        "category": "phone"
+    }
+]
