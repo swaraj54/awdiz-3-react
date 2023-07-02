@@ -19,6 +19,9 @@ import Map from './components/01-07/Map';
 import { useState } from 'react';
 import Wrapper from './components/01-07/Wrapper';
 import StyledCompo from './components/01-07/StyledCompo';
+import Xyz from './components/02-07/Xyz';
+import SinglePro from './components/02-07/SinglePro';
+import Map2 from './components/02-07/Map2';
 
 function App() {
 
@@ -29,6 +32,9 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/map2' element={<Map2 />} />
+        <Route exact path='/single-pro/:id' element={<SinglePro />} />
+        <Route exact path='/xyz' element={<Xyz />} />
         <Route exact path='/styled-compo' element={<StyledCompo />} />
         <Route exact path='/wrappper' element={<Wrapper />} />
         <Route exact path='/map' element={<Map myUsers={myUsers} setMyUsers={setMyUsers} myName={"Santosh"} kuchBhi={["rOCKY", "rAJ", "hOIHIBUI"]} />} />

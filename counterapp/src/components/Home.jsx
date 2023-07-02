@@ -1,15 +1,40 @@
-
+import './Home.css';
 
 function Home() {
     return (
         <>
+            <div className='' id=''>
+                <img />
+            </div>
             <div>
-                Home here again
+                <div>
+                    <img />
+                </div>
+                <div>
+                    <img />
+                </div>
+                <div>
+                    <img />
+                </div>
+                <div>
+                    <img />
+                </div>
+                <div>
+                    <img />
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img />
+                </div>
+                <div>
+                    <img />
+                </div>
+                <div>
+                    <img />
+                </div>
             </div>
 
-            <div>
-                Home here again
-            </div>
         </>
     )
 }
