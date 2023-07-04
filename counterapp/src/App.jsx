@@ -22,6 +22,9 @@ import StyledCompo from './components/01-07/StyledCompo';
 import Xyz from './components/02-07/Xyz';
 import SinglePro from './components/02-07/SinglePro';
 import Map2 from './components/02-07/Map2';
+import DynamicStyles from './components/04-07/DynamicStyles';
+import DynamicClasses from './components/04-07/DynamicClasses';
+import ChildernProp from './components/04-07/ChildernProp';
 
 function App() {
 
@@ -32,6 +35,9 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/children-prop' element={<ChildernProp />} />
+        <Route exact path='/dynamic-classes' element={<DynamicClasses />} />
+        <Route exact path='/dynamic-styles' element={<DynamicStyles />} />
         <Route exact path='/map2' element={<Map2 />} />
         <Route exact path='/single-pro/:id' element={<SinglePro />} />
         <Route exact path='/xyz' element={<Xyz />} />
