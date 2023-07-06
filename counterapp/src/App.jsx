@@ -25,6 +25,7 @@ import Map2 from './components/02-07/Map2';
 import DynamicStyles from './components/04-07/DynamicStyles';
 import DynamicClasses from './components/04-07/DynamicClasses';
 import ChildernProp from './components/04-07/ChildernProp';
+import FormOne from './components/06-07/FormOne';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/form-one' element={<FormOne />} />
         <Route exact path='/children-prop' element={<ChildernProp />} />
         <Route exact path='/dynamic-classes' element={<DynamicClasses />} />
         <Route exact path='/dynamic-styles' element={<DynamicStyles />} />
