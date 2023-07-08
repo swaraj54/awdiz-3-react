@@ -27,6 +27,7 @@ import DynamicClasses from './components/04-07/DynamicClasses';
 import ChildernProp from './components/04-07/ChildernProp';
 import FormOne from './components/06-07/FormOne';
 import FormSingleState from './components/08-07/FormSingleState';
+import UseCallback from './components/08-07/UseCallback';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/use-callback' element={<UseCallback />} />
         <Route exact path='/form-single-state' element={<FormSingleState />} />
         <Route exact path='/form-one' element={<FormOne />} />
         <Route exact path='/children-prop' element={<ChildernProp />} />
