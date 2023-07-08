@@ -47,6 +47,8 @@ const FormOne = () => {
             return alert("Password must be more than than 5 digit!")
         }
 
+        
+
         // const res = await axios.post('https://awdiz-backend.com/api/v1/register', {
         //     name,
         //     email: email,
