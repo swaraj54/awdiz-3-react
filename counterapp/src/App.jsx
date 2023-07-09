@@ -28,6 +28,8 @@ import ChildernProp from './components/04-07/ChildernProp';
 import FormOne from './components/06-07/FormOne';
 import FormSingleState from './components/08-07/FormSingleState';
 import UseCallback from './components/08-07/UseCallback';
+import UseMemo from './components/09-07/UseMemo';
+import UseReducer from './components/09-07/UseReducer';
 
 function App() {
 
@@ -38,6 +40,8 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/use-reducer' element={<UseReducer />} />
+        <Route exact path='/use-memo' element={<UseMemo />} />
         <Route exact path='/use-callback' element={<UseCallback />} />
         <Route exact path='/form-single-state' element={<FormSingleState />} />
         <Route exact path='/form-one' element={<FormOne />} />

@@ -9,8 +9,8 @@ const FormSingleState = () => {
     // console.log(userData.email, "- userData")
 
     function handleChange(event) {
-        // console.log(event.target.value, "- value");
-        // console.log(event.target.name, "- name");
+        console.log(event.target.value, "- value");
+        console.log(event.target.name, "- name");
 
         setUserData({ ...userData, [event.target.name]: event.target.value }); // assign
     }
