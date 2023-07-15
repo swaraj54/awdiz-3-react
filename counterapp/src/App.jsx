@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Welcome from './components/Welcome';
-import Login from './components/Login';
+import Login from './components/15-07/Login';
 import Counter from './components/Counter';
 import Section from './components/Section';
 import Type1UseEffect from './components/Type1UseEffect';
@@ -32,6 +32,7 @@ import UseMemo from './components/09-07/UseMemo';
 import UseReducer from './components/09-07/UseReducer';
 import ProductsFromBackend from './components/11-07/ProductsFromBackend';
 import Product from './components/13-07/Product';
+import Register from './components/15-07/Register';
 
 function App() {
 
@@ -42,6 +43,8 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/register' element={<Register />} />
+        <Route exact path='/login' element={<Login />} />
         <Route exact path='/product/:id' element={<Product />} />
         <Route exact path='/products-from-backend' element={<ProductsFromBackend />} />
         <Route exact path='/use-reducer' element={<UseReducer />} />
@@ -69,7 +72,6 @@ function App() {
         <Route exact path='/counter' element={<Counter />} />
         <Route exact path='/' element={<Home />} />
         <Route exact path="/welcome" element={<Welcome />} />
-        <Route exact path='/login' element={<Login />} />
       </Routes>
       {/* <Footer /> */}
     </div>
