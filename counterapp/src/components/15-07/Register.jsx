@@ -16,11 +16,28 @@ const Register = () => {
         if (userData.name && userData.email && userData.password) {
 
             const array = JSON.parse(localStorage.getItem("Users")) || [];
-            const userDataObj = { name: userData.name, email: userData.email, password: userData.password };
+            const userDataObj = {
+                name: userData.name,
+                email: userData.email,
+                password: userData.password,
+                cart : []
+            };
             // console.log(array, "-array")
             array.push(userDataObj);
             // console.log(array, "-array after push")
             localStorage.setItem("Users", JSON.stringify(array)); /// set, not update
+
+            // const ls = JSON.parse(localStorage.getItem("Test")) || [];
+            // // console.log(ls, "-ls")
+            // ls.push(userData);
+
+            // console.log(ls, "- updated ls") // 2
+
+
+
+            // localStorage.setItem("Test", JSON.stringify(ls))
+
+
             alert("Registeration Successfull..")
             router('/login')
         } else {
