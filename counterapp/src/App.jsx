@@ -33,6 +33,7 @@ import UseReducer from './components/09-07/UseReducer';
 import ProductsFromBackend from './components/11-07/ProductsFromBackend';
 import Product from './components/13-07/Product';
 import Register from './components/15-07/Register';
+import Cart from './components/18-07/Cart';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/cart' element={<Cart />} />
         <Route exact path='/register' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/product/:id' element={<Product />} />

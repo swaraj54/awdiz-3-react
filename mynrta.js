@@ -46,3 +46,7 @@
 
 // expensiveCalculation(87654)
 
+const registeredStudents = [];
+
+const userData = { name: "xyx", email: "abc@gmail.com" };
+

@@ -13,7 +13,7 @@ function Home() {
         if (user) {
             setIsUserLoggedIn(true);
         }
-    }, [])
+    })
 
     function logout() {
         localStorage.removeItem("Current-user");
@@ -21,23 +21,14 @@ function Home() {
         alert("Logout Successfull.")
     }
 
-    function addCart() {
-        if (isUserLoggedIn) {
-            
-            alert("You are logged in can cart product")
-        } else {
-            alert("pLEASE LOGIN FIRST")
-        }
-    }
-
     return (
-        <>
+        <div style={{ textAlign: 'center' }}>
+            <h1>Welcome to Awdiz Store</h1>
             <div>
                 {isUserLoggedIn ? <div onClick={logout}>Logout</div> : <button onClick={() => router('/login')}>Login</button>}
             </div>
-            <button onClick={addCart}>Add to cart</button>
 
-        </>
+        </div>
     )
 }
 
