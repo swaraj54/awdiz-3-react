@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useContext } from 'react';
+import { AuthContext } from './../../context/Auth.context';
 
 function Login() {
+    
+    const { state, login } = useContext(AuthContext);
+    // console.log(state, "- state from context in home file")
 
     const [userData, setUserData] = useState({ email: "", password: "" })
     const router = useNavigate();
@@ -25,7 +30,9 @@ function Login() {
             if (flag == false) {
                 return alert("Please check credentails.")
             } else {
-                localStorage.setItem("Current-user", JSON.stringify(userData))
+
+                login(userData);
+
                 alert("Login successfull.");
                 setUserData({ email: "", password: "" })
                 router('/');

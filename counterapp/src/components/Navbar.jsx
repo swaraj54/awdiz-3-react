@@ -1,22 +1,25 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useContext } from 'react';
+import { AuthContext } from './../context/Auth.context';
 
 
 function Navbar() {
+
+    const { state, login, logout } = useContext(AuthContext);
+    // console.log(state, "- state from context in navbar file")
+
     const [user, setUser] = useState({});
     const router = useNavigate();
 
     useEffect(() => {
-        const isUserPresent = JSON.parse(localStorage.getItem("Current-user"));
-        if (isUserPresent) {
-            setUser(isUserPresent)
+        if (state?.user) {
+            setUser(state?.user)
+        } else {
+            setUser({});
         }
-    })
+    }, [state])
 
-    function logout() {
-        localStorage.removeItem("Current-user")
-        setUser({})
-    }
 
     return (
         <div style={{ display: 'flex', justifyContent: "space-around", border: "5px solid black", width: '100%', textAlign: "center" }}>
@@ -30,7 +33,7 @@ function Navbar() {
                         <h3 onClick={() => router('/cart')} style={{ marginLeft: "40px" }}>Cart</h3>
                     </>
                     :
-                    <h3  onClick={() => router('/login')}>Login</h3>
+                    <h3 onClick={() => router('/login')}>Login</h3>
                 }
             </div>
         </div>
