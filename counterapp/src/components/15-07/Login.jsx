@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from './../../context/Auth.context';
 
 function Login() {
-    
+
     const { state, login } = useContext(AuthContext);
     // console.log(state, "- state from context in home file")
 
@@ -23,19 +23,15 @@ function Login() {
             for (var i = 0; i < users.length; i++) {
                 if (users[i].email == userData.email && users[i].password == userData.password) {
                     flag = true; // re-assign
+                    login(users[i]);
+                    alert("Login successfull.");
+                    setUserData({ email: "", password: "" })
+                    router('/');
                     break;
                 }
             }
-
             if (flag == false) {
                 return alert("Please check credentails.")
-            } else {
-
-                login(userData);
-
-                alert("Login successfull.");
-                setUserData({ email: "", password: "" })
-                router('/');
             }
 
         } else {
@@ -53,6 +49,7 @@ function Login() {
                 <input type="password" name="password" onChange={handleChange} /><br />
                 <input type="submit" value='Login' /><br />
             </form>
+            <button onClick={() => router("/register")}>Register</button>
         </div>
     )
 }

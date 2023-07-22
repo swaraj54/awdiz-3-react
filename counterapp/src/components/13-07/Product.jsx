@@ -44,6 +44,8 @@ const Product = () => {
 
             for (var i = 0; i < users.length; i++) {
                 if (users[i].email == currentUserEmail) {
+                    // check product already present in cart if yes then dont add if no them only add
+                    
                     users[i].cart.push(singleProduct);
                     localStorage.setItem("Users", JSON.stringify(users));
                     break;

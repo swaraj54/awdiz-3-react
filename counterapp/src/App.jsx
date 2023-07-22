@@ -34,6 +34,7 @@ import ProductsFromBackend from './components/11-07/ProductsFromBackend';
 import Product from './components/13-07/Product';
 import Register from './components/15-07/Register';
 import Cart from './components/18-07/Cart';
+import Profile from './components/22-07/Profile';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route exact path='/profile' element={<Profile />} />
         <Route exact path='/cart' element={<Cart />} />
         <Route exact path='/register' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
