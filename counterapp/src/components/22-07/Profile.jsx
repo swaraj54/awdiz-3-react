@@ -4,12 +4,18 @@ import { AuthContext } from '../../context/Auth.context';
 
 const Profile = () => {
 
-    const { login } = useContext(AuthContext)
+    const { login, state } = useContext(AuthContext)
 
     const [userData, setUserData] = useState({});
     const router = useNavigate()
 
     console.log(userData, "userData")
+
+    useEffect(() => {
+        if (!state?.user?.name) {
+            router('/login')
+        }
+    }, [state])
 
     useEffect(() => {
         const currentUser = JSON.parse(localStorage.getItem("Current-user"));
