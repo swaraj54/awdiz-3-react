@@ -3,7 +3,7 @@ import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-    const [userData, setUserData] = useState({ name: "", email: "", password: "" });
+    const [userData, setUserData] = useState({ name: "", email: "", password: "", role: "Buyer" });
 
     const router = useNavigate();
 
@@ -26,12 +26,24 @@ const Register = () => {
         }
     }
 
+    function selectRole(event) {
+        console.log(event.target.value, "- role")
+        setUserData({ ...userData, ["role"]: event.target.value })
+    }
+
+
+
     return (
         <div>
             <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <label>Name :</label><br />
                 <input value={userData.name} type='text' onChange={handleChange} name="name" /><br />
+                <label>Select Role :</label><br />
+                <select onChange={selectRole} >
+                    <option value="Buyer">Buyer</option>
+                    <option value="Seller">Seller</option>
+                </select><br />
                 <label>Email :</label><br />
                 <input value={userData.email} type='email' onChange={handleChange} name='email' /><br />
                 <label>Password :</label><br />

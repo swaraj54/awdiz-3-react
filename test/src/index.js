@@ -5,38 +5,41 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import { AuthProvider } from './components/Context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Toaster
-      position="top-center"
-      reverseOrder={false}
-      gutter={8}
-      containerClassName=""
-      containerStyle={{}}
-      toastOptions={{
-        // Define default options
-        className: '',
-        duration: 5000,
-        style: {
-          background: '#363636',
-          color: '#fff',
-        },
-
-        // Default options for specific types
-        success: {
-          duration: 3000,
-          theme: {
-            primary: 'green',
-            secondary: 'black',
+    <AuthProvider>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#363636',
+            color: '#fff',
           },
-        },
-      }}
-    />
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            theme: {
+              primary: 'green',
+              secondary: 'black',
+            },
+          },
+        }}
+      />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AuthProvider>
   </React.StrictMode>
 );
 

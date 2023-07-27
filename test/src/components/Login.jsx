@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from './Context/AuthContext'
 
 const Login = () => {
+    const { state, Login } = useContext(AuthContext);
     const [userData, setUserData] = useState({ email: "", password: "" })
     const router = useNavigate();
 
@@ -18,6 +20,7 @@ const Login = () => {
             for (var i = 0; i < allUsers.length; i++) {
                 if (allUsers[i].email == userData.email && allUsers[i].password == userData.password) {
                     localStorage.setItem("Currrent-user", JSON.stringify(allUsers[i]))
+                    Login(allUsers[i]);
                     setUserData({ email: "", password: "" })
                     toast.success("Login Successfull.")
                     router('/')
