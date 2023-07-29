@@ -18,7 +18,7 @@ const Register = () => {
             const usersArray = JSON.parse(localStorage.getItem("Users")) || [];
             usersArray.push(userData);
             localStorage.setItem("Users", JSON.stringify(usersArray))
-            setUserData({ name: "", email: "", password: "" })
+            setUserData({ name: "", email: "", password: "", role: "Buyer" })
             router('/login');
             toast.success("Registration Successfull.")
         } else {
@@ -27,7 +27,7 @@ const Register = () => {
     }
 
     function selectRole(event) {
-        console.log(event.target.value, "- role")
+        // console.log(event.target.value, "- role")
         setUserData({ ...userData, ["role"]: event.target.value })
     }
 
