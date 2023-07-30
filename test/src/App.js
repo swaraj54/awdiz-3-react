@@ -8,6 +8,7 @@ import Register from './components/Register';
 import AddProduct from './components/AddProduct';
 import AllProducts from './components/AllProducts';
 import Profile from './components/Profile';
+import Ref from './components/Ref';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/add-product' element={<AddProduct />} />
         <Route exact path='/all-products' element={<AllProducts />} />
         <Route exact path='/profile' element={<Profile />} />
+        <Route exact path='/ref' element={<Ref />} />
       </Routes>
     </div>
   );
