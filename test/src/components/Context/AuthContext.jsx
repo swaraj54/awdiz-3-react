@@ -10,9 +10,20 @@ import { createContext, useEffect, useReducer } from "react";
 
 export const AuthContext = createContext();
 
-const initalState = { user: null, product: [] };
+const initalState = { user: null, product: [], studentList: {} };
 
+// const action = { type: "LOGIN", payload: { email: "abc@Gmail.com", password: "pass", name: "swaraj" } }
 const reducer = (state, action) => {
+    console.log(action, "- action here")
+
+    // if (action.type == "LOGIN") {
+    //     return { user: action.payload } //Re assigning 
+    // } else if (action.type == "LOGOUT") {
+    //     return { user: null }
+    // } else {
+    //     return state;
+    // }
+
     switch (action.type) {
         case "LOGIN":
             return { user: action.payload } // re assigning
@@ -23,6 +34,7 @@ const reducer = (state, action) => {
     }
 
 }
+// Higher Order Component - it takes props as another component - children = component
 export const AuthProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, initalState);
